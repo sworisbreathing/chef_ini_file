@@ -11,4 +11,4 @@ group :unit do
   gem 'chefspec', '~> 4.2'
 end
 
-gem "codeclimate-test-reporter", group: :test, require: nil
+gem "codeclimate-test-reporter", group: :unit, require: nil
