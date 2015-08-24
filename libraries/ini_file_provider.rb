@@ -31,6 +31,7 @@ class Chef
       action :create do
         file new_resource.path do
           action :create
+          atomic_update new_resource.atomic_update unless new_resource.atomic_update.nil?
         end
       end
     end
