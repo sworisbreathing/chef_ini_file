@@ -1,5 +1,9 @@
 ini_file Cookbook
 =================
+[![Build Status](https://travis-ci.org/sworisbreathing/chef_ini_file.svg?branch=develop)](https://travis-ci.org/sworisbreathing/chef_ini_file)
+
+Description
+-----------
 This cookbook provides resources for managing INI files and their contents.
 
 Requirements
