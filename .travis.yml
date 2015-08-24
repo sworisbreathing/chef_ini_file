@@ -1,6 +1,9 @@
 language: ruby
 cache: bundler
 rvm:
-- 2.1
+  - 2.1
+env:
+  global:
+    - CODECLIMATE_REPO_TOKEN=b563ecd430699fd9b3b716734c06642cd7698c4c52dd33edd065f3df84c35d45
 script:
-- bundle exec rake
+  - bundle exec rake

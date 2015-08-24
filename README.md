@@ -1,6 +1,8 @@
 ini_file Cookbook
 =================
 [![Build Status](https://travis-ci.org/sworisbreathing/chef_ini_file.svg?branch=develop)](https://travis-ci.org/sworisbreathing/chef_ini_file)
+[![Code Climate](https://codeclimate.com/github/sworisbreathing/chef_ini_file/badges/gpa.svg)](https://codeclimate.com/github/sworisbreathing/chef_ini_file)
+[![Test Coverage](https://codeclimate.com/github/sworisbreathing/chef_ini_file/badges/coverage.svg)](https://codeclimate.com/github/sworisbreathing/chef_ini_file/coverage)
 
 Description
 -----------
