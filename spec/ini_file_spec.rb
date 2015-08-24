@@ -9,7 +9,18 @@ describe 'lwrp_test::default' do
     allow_any_instance_of(Chef::Recipe).to receive(:include_recipe).and_return(true)
   end
 
-  it 'creates an ini file' do
-    expect(chef_run).to create_file('/tmp.ini')
+  it 'creates an ini file with default attributes' do
+    expect(chef_run).to create_file('/tmp.ini').with(
+      atomic_update: true
+    )
+  end
+
+  it 'creates an ini file with explicit attributes' do
+    expect(chef_run).to create_file('/tmp/explicit_attributes1.ini').with(
+      atomic_update: true
+    )
+    expect(chef_run).to create_file('/tmp/explicit_attributes2.ini').with(
+      atomic_update: false
+    )
   end
 end
