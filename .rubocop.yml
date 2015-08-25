@@ -8,7 +8,7 @@ AllCops:
     - Vagrantfile
   Exclude:
     - metadata.rb
-    - vendor/**
+    - vendor/**/*
 
 AlignParameters:
   Enabled: false
