@@ -28,6 +28,7 @@ class Chef
       attribute :backup, kind_of: [FalseClass, Integer]
       attribute :group, kind_of: [String, Integer]
       attribute :inherits, kind_of: [TrueClass, FalseClass]
+      attribute :mode, kind_of: [Integer, String]
 
       actions :create, :create_if_missing, :delete, :nothing, :touch
       default_action :create

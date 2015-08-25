@@ -14,7 +14,8 @@ describe 'lwrp_test::default' do
       atomic_update: true,
       backup: 5,
       group: nil,
-      inherits: nil
+      inherits: nil,
+      mode: nil
     )
   end
 
@@ -23,14 +24,16 @@ describe 'lwrp_test::default' do
       atomic_update: true,
       backup: false,
       group: 1,
-      inherits: true
+      inherits: true,
+      mode: 755
     )
 
     expect(chef_run).to create_file('/tmp/explicit_attributes2.ini').with(
       atomic_update: false,
       backup: 1,
       group: 'outie',
-      inherits: false
+      inherits: false,
+      mode: '0755'
     )
   end
 end

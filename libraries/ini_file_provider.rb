@@ -35,6 +35,7 @@ class Chef
           backup new_resource.backup unless new_resource.backup.nil?
           group new_resource.group unless new_resource.group.nil?
           inherits new_resource.inherits unless new_resource.inherits.nil?
+          mode new_resource.mode unless new_resource.mode.nil?
         end
       end
     end

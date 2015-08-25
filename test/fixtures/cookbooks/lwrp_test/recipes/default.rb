@@ -5,6 +5,7 @@ ini_file '/tmp/explicit_attributes1.ini' do
   backup false
   group 1
   inherits true
+  mode 755
 end
 
 ini_file '/tmp/explicit_attributes2.ini' do
@@ -12,4 +13,5 @@ ini_file '/tmp/explicit_attributes2.ini' do
   backup 1
   group 'outie'
   inherits false
+  mode '0755'
 end
