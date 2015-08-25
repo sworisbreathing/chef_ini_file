@@ -25,6 +25,11 @@ class Chef
       attribute :path, kind_of: String, name_attribute: true
 
       attribute :atomic_update, kind_of: [TrueClass, FalseClass]
+      attribute :backup, kind_of: [FalseClass, Integer]
+      attribute :group, kind_of: [String, Integer]
+      attribute :inherits, kind_of: [TrueClass, FalseClass]
+      attribute :mode, kind_of: [Integer, String]
+      attribute :owner, kind_of: [String, Integer]
 
       actions :create, :create_if_missing, :delete, :nothing, :touch
       default_action :create

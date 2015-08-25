@@ -11,16 +11,38 @@ describe 'lwrp_test::default' do
 
   it 'creates an ini file with default attributes' do
     expect(chef_run).to create_file('/tmp.ini').with(
-      atomic_update: true
+      atomic_update: true,
+      backup: 5,
+      group: nil,
+      inherits: nil,
+      mode: nil,
+      owner: nil
     )
   end
 
   it 'creates an ini file with explicit attributes' do
     expect(chef_run).to create_file('/tmp/explicit_attributes1.ini').with(
-      atomic_update: true
+      atomic_update: true,
+      backup: false,
+      group: 1,
+      inherits: true,
+      mode: 755,
+      owner: 2
     )
+
     expect(chef_run).to create_file('/tmp/explicit_attributes2.ini').with(
-      atomic_update: false
+      atomic_update: false,
+      backup: 1,
+      group: 'outie',
+      inherits: false,
+      mode: '0755',
+      owner: 'outey'
     )
+
+    expect(chef_run).to delete_file('/tmp/delete.ini')
+
+    expect(chef_run).to render_file('/tmp/create_if_missing.ini')
+
+    expect(chef_run).to touch_file('/tmp/touch.ini')
   end
 end
