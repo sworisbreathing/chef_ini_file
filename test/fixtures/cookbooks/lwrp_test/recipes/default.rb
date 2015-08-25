@@ -17,3 +17,7 @@ ini_file '/tmp/explicit_attributes2.ini' do
   mode '0755'
   owner 'outey'
 end
+
+ini_file '/tmp/delete.ini' do
+  action :delete
+end

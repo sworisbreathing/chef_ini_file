@@ -38,5 +38,7 @@ describe 'lwrp_test::default' do
       mode: '0755',
       owner: 'outey'
     )
+
+    expect(chef_run).to delete_file('/tmp/delete.ini')
   end
 end
