@@ -29,6 +29,7 @@ class Chef
       attribute :group, kind_of: [String, Integer]
       attribute :inherits, kind_of: [TrueClass, FalseClass]
       attribute :mode, kind_of: [Integer, String]
+      attribute :owner, kind_of: [String, Integer]
 
       actions :create, :create_if_missing, :delete, :nothing, :touch
       default_action :create

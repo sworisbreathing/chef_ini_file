@@ -15,7 +15,8 @@ describe 'lwrp_test::default' do
       backup: 5,
       group: nil,
       inherits: nil,
-      mode: nil
+      mode: nil,
+      owner: nil
     )
   end
 
@@ -25,7 +26,8 @@ describe 'lwrp_test::default' do
       backup: false,
       group: 1,
       inherits: true,
-      mode: 755
+      mode: 755,
+      owner: 2
     )
 
     expect(chef_run).to create_file('/tmp/explicit_attributes2.ini').with(
@@ -33,7 +35,8 @@ describe 'lwrp_test::default' do
       backup: 1,
       group: 'outie',
       inherits: false,
-      mode: '0755'
+      mode: '0755',
+      owner: 'outey'
     )
   end
 end

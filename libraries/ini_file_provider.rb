@@ -36,6 +36,7 @@ class Chef
           group new_resource.group unless new_resource.group.nil?
           inherits new_resource.inherits unless new_resource.inherits.nil?
           mode new_resource.mode unless new_resource.mode.nil?
+          owner new_resource.owner unless new_resource.owner.nil?
         end
       end
     end
