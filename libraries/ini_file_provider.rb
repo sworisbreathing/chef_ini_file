@@ -33,6 +33,7 @@ class Chef
           action :create
           atomic_update new_resource.atomic_update unless new_resource.atomic_update.nil?
           backup new_resource.backup unless new_resource.backup.nil?
+          group new_resource.group unless new_resource.group.nil?
         end
       end
     end
