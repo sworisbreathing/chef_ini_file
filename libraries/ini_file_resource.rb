@@ -27,6 +27,7 @@ class Chef
       attribute :atomic_update, kind_of: [TrueClass, FalseClass]
       attribute :backup, kind_of: [FalseClass, Integer]
       attribute :group, kind_of: [String, Integer]
+      attribute :inherits, kind_of: [TrueClass, FalseClass]
 
       actions :create, :create_if_missing, :delete, :nothing, :touch
       default_action :create
