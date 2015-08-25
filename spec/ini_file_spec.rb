@@ -40,5 +40,9 @@ describe 'lwrp_test::default' do
     )
 
     expect(chef_run).to delete_file('/tmp/delete.ini')
+
+    expect(chef_run).to render_file('/tmp/create_if_missing.ini')
+
+    expect(chef_run).to touch_file('/tmp/touch.ini')
   end
 end

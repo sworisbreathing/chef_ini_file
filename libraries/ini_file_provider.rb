@@ -28,7 +28,12 @@ class Chef
         true
       end
 
-      [:create, :delete].each do |ackshun|
+      [
+        :create,
+        :delete,
+        :create_if_missing,
+        :touch
+      ].each do |ackshun|
         action ackshun do
           file new_resource.path do
             action ackshun

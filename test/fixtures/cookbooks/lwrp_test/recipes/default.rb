@@ -21,3 +21,11 @@ end
 ini_file '/tmp/delete.ini' do
   action :delete
 end
+
+ini_file '/tmp/create_if_missing.ini' do
+  action :create_if_missing
+end
+
+ini_file '/tmp/touch.ini' do
+  action :touch
+end
